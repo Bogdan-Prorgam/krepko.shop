@@ -1,0 +1,42 @@
+h1{
+	color: #fff;
+}
+
+.img_prd{
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.img_prd img{
+	height: 200px;
+}
+
+.penc{
+	width: 35px;
+	cursor: pointer;
+}
+
+.number{
+	/* display: flex; */
+	justify-content: center;
+	align-items: center;
+	font-weight: 900;
+	font-size: 20px;
+	text-align: center;
+	padding-right: 10px;
+}
+
+.price{
+	font-weight: 700;
+}
+
+td{
+	font-size: 20px;
+	font-family: "Montserrat", sans-serif;
+}
+
+.title_td{
+	font-weight: 600;
+}

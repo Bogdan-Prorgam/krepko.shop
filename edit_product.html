@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang='ru'>
+
+<head>
+	<meta charset='UTF-8' />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge' />
+	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/edit_product.css">
+	<title>Редактор товаров</title>
+</head>
+
+<body>
+	<div id='edit-modal' class='modal'>
+        <div class="edit-box">
+            <span class='close'>&times;</span>
+        </div>
+    </div>
+
+	<h1>Редактирование товаров</h1>
+	<table>
+		<colgroup>
+			<col span="6" style="background:Khaki"><!-- С помощью этой конструкции задаем цвет фона для первых двух столбцов таблицы-->
+			<!-- <col style="background-color:LightCyan">Задаем цвет фона для следующего (одного) столбца таблицы -->
+		</colgroup>
+		<tr>
+			<th>№ товара</th>
+			<th>Изображение</th>
+			<th>Наименование</th>
+			<th>Описание</th>
+			<th>Цена, руб.</th>
+			<th></th>
+		</tr>
+		<tr>
+			<td class="number">1</td>
+			<td class="img_prd"><img src="images/product/Product_1.jpg"></td>
+			<td class="title_td">Крепежный уголок</td>
+			<td></td>
+			<td class="price">24</td>
+			<td><img class="penc" src="images/icons/pencil.svg"></td>
+		</tr>
+		<tr>
+			<td class="number">2</td>
+			<td class="img_prd"><img src="images/product/Product_2.jpg"></td>
+			<td class="title_td">Крепежный усиленный уголок</td>
+			<td></td>
+			<td class="price">36</td>
+			<td><img class="penc" src="images/icons/pencil.svg"></td>
+		</tr>
+	</table>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	
+</body>
+
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>krepko.shop</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+
+</head>
+
+
+<body id="top">
+    
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-jump">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="row">
+
+            <div class="header-logo">
+                <a class="site-logo" href="index.html"><img src="images/logo2.png" alt="Homepage"></a>
+            </div>
+            
+            <nav class="header-nav-wrap">
+                <ul class="header-nav">
+                    <li class="current"><a class="smoothscroll"  href="#home" title="home">Главная</a></li>
+                    <li><a class="smoothscroll"  href="#about" title="about">О нас</a></li>
+                    <li><a class="smoothscroll"  href="#works" title="works">Продукция</a></li>
+                    <li><a class="smoothscroll"  href="#contact" title="contact">Контакты</a></li>
+                </ul>
+            </nav> <!-- end header-nav-wrap -->
+            
+            <a class="header-menu-toggle" href="#0">
+                <span class="header-menu-icon"></span>
+            </a>
+
+        </div> <!-- end row -->
+
+        <div class="hamburger-menu"> <input id="menu__toggle" type="checkbox"> <label class="menu__btn" for="menu__toggle"><img class="cart-ico" src="images/icons/cart.svg" alt=""><div class="amount_ico_cart"></div>
+            <span></span> </label>
+        <ul class="menu__box">
+            <div class="content">
+                <p class="empty">Корзина пуста, пожалуйста добавте товар в корзину, чтобы он здесь появился</p>
+            </div>
+            <button class="checkout">Оформить заказ</button>
+            
+        </ul>
+        </div>
+    </header> <!-- end s-header -->
+
+    <div id='order-modal' class='modal'>
+        <div class="order-box">
+            <h5>Оформить заказ</h5>
+            <p class="massage_result"></p>
+            <input type="text" class="input_order" id="name" placeholder="Имя*">
+            <input type="tel" class="input_order" id="phone" autofocus="autofocus" required="required" maxlength="50"  pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="+7 (9__) ___-__-__">
+            <input type="text" class="input_order" id="email" placeholder="Электронная почта*">
+            <input type="text" class="input_order" id="address" placeholder="Город, улица, дом">
+            <textarea type="text" class="input_order" id="comment" placeholder="Комментарий к заказу"></textarea>
+            <button id="send_order">Отправить заявку</button>
+            <span class='close'>&times;</span>
+        </div>
+    </div>
+
+    <div id='send-modal' class='modal'>
+        <div class="send-box">
+            <img src="images/sels.png" alt="">
+            <div class="box_content">
+                <p class="massage_result_mailing"></p>
+                <p class="text_top_send">Подпишись на рассылку и получи</p>
+                <p class="title_send">70% скидку</p>
+                <p class="text_bottom_send">Сноска, здесь пишется уточняющий текст</p>
+                <input type="text" class="input_order" id="email_send" placeholder="Электронная почта">
+                <button id="send_mail">Подписаться</button>
+            </div>
+            <span class='close'>&times;</span>
+        </div>
+    </div>
+
+    <div id='succes-cart' class='modal'>
+        <div class="send-box">
+            <p>Товар добавлен в корзину</p>
+            <button id="succes-order">Оформить заказ</button>
+            <button id="continie-shop">Продолжить покупки</button>
+            <span class='close'>&times;</span>
+        </div>
+    </div>
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h1>
+                Мы предлагаем <br>
+                надёжный крепёж <br>
+                по выгодной цене
+                </h1>
+
+                <div class="home-content__button">
+                    <a href="#works" class="smoothscroll btn btn-animatedbg">
+                        Наша продукция
+                    </a>
+                </div>
+
+            </div> <!-- end home-content__main -->
+
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    Проскролить
+                </a>
+            </div>
+
+        </div> <!-- end home-content -->
+
+        <ul class="home-social">
+            <li>
+                <a href="#0"><img src="images/icons/wildberries.png" class="fab wildberries" aria-hidden="true"><span>Wildberries</span></a>
+            </li>
+            <li>
+                <a href="#0"><img src="images/icons/ozon.png" class="fab ozon" aria-hidden="true"><span>Ozon</span></a>
+            </li>
+            <li>
+                <a href="#0"><img src="images/icons/avito.png" class="fab avito" aria-hidden="true"><span>Avito</span></a>
+            </li>
+            <li>
+                <a href="#0"><img src="images/icons/market.png" class="fab market" aria-hidden="true"><span>Яндекс Маркет</span></a>
+            </li>
+        </ul> <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 data-num="01" class="subhead">О нас</h3>
+                <h1 class="display-1">
+                    Наша компания организована в 1998 году. 
+                    Уже почти 24 года производственная компания «krepko.shop» изготавливает перфорированный крепеж методом холодной штамповки.
+                </h1>
+                <p class="lead">
+                    Интересный факт: за годы работы мы уже более 22 раз обернули Землю перфорированной лентой по экватору.
+                </p>
+            </div>
+        </div>
+
+        <div class="row about-process block-1-2 block-tab-full">
+
+            <div class="col-block item-process" data-aos="fade-up">
+                <div class="item-process__header item-process__header--branding">
+                    <img src="images/icons/quality.svg" style="width: 5.5rem;" alt="">
+                    <h3>Качество</h3>
+                </div>
+                <p>
+                    Мы производим исключительно из качественного и надежного материала, что обеспечивает надежность соединение скрепляемых модулей. Так же наша продукция имеет высокую влагостойкость и устойчивость к температурным перепадам.
+                </p> 
+            </div>
+            <div class="col-block item-process" data-aos="fade-up">
+                <div class="item-process__header item-process__header--documentation">
+                    <img src="images/icons/simple.svg" style="width: 5.5rem;" alt="">
+                    <h3>Удобство</h3>
+                </div>
+                <p>
+                    У наших изделий имеется наличие технологических отверстий, что позволяет крепить элементы быстро и надежно. Монтажная лента легко принимает форму нестандартных контуров.
+                </p>
+            </div>
+            <div class="col-block item-process" data-aos="fade-up">
+                <div class="item-process__header item-process__header--planning">
+                    <img src="images/icons/price.svg" style="width: 5.5rem;" alt="">
+                    <h3>Цена</h3>
+                </div>
+                <p>
+                    Мы предлагаем доступную стоимость и низкие трудовые и технические затраты на использование нашей продукции.
+                </p>
+            </div>
+            <div class="col-block item-process" data-aos="fade-up">
+                <div class="item-process__header item-process__header--implementation">
+                    <img src="images/icons/speed.svg" style="width: 5.5rem;" alt="">
+                    <h3>Скорость</h3>
+                </div>
+                <p>
+                    Мы производим ежедневно 400 000 крепежных изделий и отправляем нашим клиентам самой быстрой доставке по России.
+                </p>
+            </div>
+
+        </div>  <!-- end about-process -->
+
+    </section> <!-- end s-about -->
+
+
+    <!-- works
+    ================================================== -->
+    <section id="works" class="s-works target-section">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 data-num="02" class="subhead">Наша продукция</h3>
+                <h1 class="display-1">
+                Здесь находится наша продукция
+                </h1>
+            </div>
+        </div>
+
+        <div class="portfolio block-1-4 block-m-1-3 block-tab-1-2 collapse">
+            
+            <div class="col-block item-folio" data-aos="fade-up">
+
+                <div class="item-folio__thumb">
+                    <!-- <div class="conteiner_product_img"> -->
+                        <img src="images/product/product_1.jpg">
+                    <!-- </div> -->
+                    <h4>Крепежный уголок</h4>
+                    <div><span class="price">Цена: </span><span class="price_num">24</span><span>₽</span></div>
+                    <button class="add_basket">В корзину</button>
+                </div>
+
+            </div> <!-- end item-folio -->
+
+            <div class="col-block item-folio" data-aos="fade-up">
+
+                <div class="item-folio__thumb">
+                    <img src="images/product/product_2.jpg">
+                    <h4>Крепежный усиленный уголок</h4>
+                    <div><span class="price">Цена: </span><span class="price_num">36</span><span>₽</span></div>
+                    <button class="add_basket">В корзину</button>
+                </div>
+
+            </div> <!-- end item-folio -->
+
+            <div class="col-block item-folio" data-aos="fade-up">
+
+                <div class="item-folio__thumb">
+                    <img src="images/product/product_3.jpg">
+                    <h4>Ассиметричный уголок</h4>
+                    <div><span class="price">Цена: </span><span class="price_num">70</span><span>₽</span></div>
+                    <button class="add_basket">В корзину</button>
+                </div>
+
+            </div> <!-- end item-folio -->
+
+            <div class="col-block item-folio" data-aos="fade-up">
+
+                <div class="item-folio__thumb">
+                    <img src="images/product/product_4.jpg">
+                    <h4>Крепежный уголок 135 градусов</h4>
+                    <div><span class="price">Цена: </span><span class="price_num">12</span><span>₽</span></div>
+                    <button class="add_basket">В корзину</button>
+                </div>
+
+            </div> <!-- end item-folio -->
+
+            <div class="col-block item-folio" data-aos="fade-up">
+
+                <div class="item-folio__thumb">
+                    <img src="images/product/product_5.jpg">
+                    <h4>Z-образные уголки</h4>
+                    <div><span class="price">Цена: </span><span class="price_num">52</span><span>₽</span></div>
+                    <button class="add_basket">В корзину</button>
+                </div>
+
+            </div> <!-- end item-folio -->
+
+            <div class="col-block item-folio" data-aos="fade-up">
+
+                <div class="item-folio__thumb">
+                    <img src="images/product/product_6.jpg">
+                    <h4>Анкерный уголок</h4>
+                    <div><span class="price">Цена: </span><span class="price_num">70.24</span><span>₽</span></div>
+                    <button class="add_basket">В корзину</button>
+                </div>
+
+            </div> <!-- end item-folio -->
+
+            <div class="col-block item-folio" data-aos="fade-up">
+
+                <div class="item-folio__thumb">
+                    <img src="images/product/product_7.jpg">
+                    <h4>Крепежный уголок равносторонний</h4>
+                    <div><span class="price">Цена: </span><span class="price_num">47</span><span>₽</span></div>
+                    <button class="add_basket">В корзину</button>
+                </div>
+
+            </div> <!-- end item-folio -->
+
+            <div class="col-block item-folio" data-aos="fade-up">
+
+                <div class="item-folio__thumb">
+                    <img src="images/product/product_8.jpg">
+                    <h4>Пластины соединительные</h4>
+                    <div><span class="price">Цена: </span><span class="price_num">93.24</span><span>₽</span></div>
+                    <button class="add_basket">В корзину</button>
+                </div>
+
+            </div> <!-- end item-folio -->
+
+        </div> <!-- end portfolio -->
+
+    </section> <!-- end s-works -->
+
+
+    <!-- clients
+    ================================================== -->
+    <section id="clients" class="s-clients target-section">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 data-num="03" class="subhead">Интернет площадки</h3>
+                <h1 class="display-1 display-1--light">Помимо того что у нас есть свой сайт, мы так же располагаемся на разных интернет площадках</h1>
+            </div>
+        </div>
+
+        <div class="row clients-list block-1-4 block-tab-1-3 block-mob-1-2" data-aos="fade-up">
+
+            <div class="col-block item-client">
+                <a href="#0">
+                    <img src="images/icons/avito-color.png" alt="">
+                </a>
+            </div>
+            <div class="col-block item-client">
+                <a href="#0">
+                    <img src="images/icons/wildberries-color.png" alt="">
+                </a>
+            </div>
+            <div class="col-block item-client">
+                <a href="#0">
+                    <img src="images/icons/ozon-color.png" alt="">
+                </a>
+            </div>
+            <div class="col-block item-client">
+                <a href="#0">
+                    <img src="images/icons/market-color.png" alt="">
+                </a>
+            </div>
+
+        </div> <!-- clients-list -->
+
+    </section> <!-- end s-clients -->
+
+
+    <!-- stats
+    ================================================== -->
+    <section id="stats" class="s-stats">
+
+        <div class="row stats-block block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+                
+            <div class="col-block item-stats ">
+                <div class="container_numbers">
+                <div class="item-stats__count">3000</div><span>м2</span>
+                </div>
+                <h5>Складской комплекс</h5>
+            </div>
+            <div class="col-block item-stats">
+                <div class="item-stats__count">1000</div>
+                <h5>Видов изделий</h5>
+            </div>
+            <div class="col-block item-stats">
+                <div class="item-stats__count">24</div>
+                <h5>Года компании</h5>
+            </div>
+            <div class="col-block item-stats">
+                <div class="item-stats__count">9000</div>
+                <h5>Довольных клиентов</h5> 
+            </div>
+
+        </div> <!-- end stats -->
+
+    </section> <!-- end s-stats -->
+
+
+    <!-- contact
+    ================================================== -->
+    <section id="contact" class="s-contact target-section">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 data-num="04" class="subhead">Контакты</h3>
+                <h1 class="display-1 display-1--light">Если же у вас возникли какие либо вопросы, или вы хотите с нами связаться пишите нам на почту: <a href="mailto:krepko.shop@bk.ru">krepko.shop@bk.ru</a></h1>
+            </div>
+        </div>
+
+        <div class="row contact-infos">
+
+            <div class="col-five md-seven tab-full contact-address" data-aos="fade-up">
+                <h4>Где нас найти?</h4>
+
+                <p>
+                Московская область, <br>
+                Москва ул. Менделеева 24
+                </p>
+            </div>
+
+            <div class="col-four md-six tab-full contact-number" data-aos="fade-up">
+                <h4>Наши контакты</h4>
+
+                <ul class="contact-list">
+                    <li><a href="mailto:#0">krepko.shop@bk.ru</a></li>
+                    <li><a href="tel:197-543-2345">+7 (812) 330-03-90</a></li>
+                </ul>
+            </div>
+
+        </div> <!-- end contact-infos -->
+
+    </section> <!-- end s-contact -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="row">
+            <div class="col-full cl-copyright">
+                <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> krepko.shop
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</span>
+            </div>
+        </div>
+
+        <div class="cl-go-top">
+            <a class="smoothscroll" title="Вернуться наверх" href="#top"></a>
+        </div>
+    </footer>
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/ajax.js"></script>
+</body>
